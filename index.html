@@ -1,0 +1,49 @@
+<meta content="utf-8">
+<html>
+   <head>
+      <title>Adam Ferchichi - Joymile - DemoDay</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <script src="js/main.js"></script>
+      <link rel="stylesheet" type="text/css" href="/css/style.css">
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZKy9E81kz0hG3Z8nx_3bFTEgln-U1VUA" type="text/javascript"></script>
+      <script>
+         function initMap(map, lat, lng){
+         
+               var myOptions = {
+                           center: new google.maps.LatLng( lat,lng ),
+                           zoom: 12,
+                       };
+                       var drawingManager = new google.maps.drawing.DrawingManager();
+         var m = $(map);
+                       var map = new google.maps.Map( $[0], myOptions );
+                       drawingManager.setMap( map );
+           };
+         
+      </script>
+   </head>
+   <body>
+      <div class="loader"></div>
+      <div class="container">
+         <h1> Wpisz swoje wyszukanie </h1>
+         <select id ="filter">
+            <option value="0" selected>Name</option>
+            <option value="1">Fullname</option>
+            <option value="2">Currency</option>
+            <option value="3">Code</option>
+            <option value="4">Capital city</option>
+            <option value="5">Calling code</option>
+         </select>
+         <input type="text" id="search" placeholder="Wpisz tekst...">
+         <div class="search-results">
+         </div>
+      </div>
+      <div class="modals">
+      </div>
+   </body>
+</html>
+
+
